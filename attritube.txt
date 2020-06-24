@@ -1,0 +1,7 @@
+setattribute -> 값 지정
+getattribute -> 값 가져오기
+
+getAttributeNames = > 값 다 가져오기
+session.getid() ->  고유값 가져오기
+getMaxinactiveinterval() -> 섹션 시간
+

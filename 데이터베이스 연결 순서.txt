@@ -1,0 +1,20 @@
+데이터베이스 단계
+
+connection -> statement -> resultSet 
+
+driver -> url -> uid -> upw -> query
+
+데이터베이스 연결 순서
+
+JDBC 드라이버 로드 -> DriverManager (Class.forName("oracle.jdbc.driver.OracleDriver);) : 메모리에 OracleDriver가 로드 됩니다.
+
+데이터베이스 연결 -> Connection (DriverManager.getConnection(JDBC URL , 계정아이디 , 비밀번호);)  : Connection 객체 생성 합니다.
+
+SQL문 실행 -> Statement (Connection.createStatement();) : Statement 객체를 통해 SQL 문이 실행됩니다.
+
+데이터베이스 연결 해제 -> ResultSet (statement.executeQuery() , statment.executeUpdate()) : SQL문의 결과값을 ResultSet 객체로 받습니다.
+
+Statement 
+
+1.executeQuery() -> SQL문 실행 후 여러 개의 결과값 생기는 경우 사용 합니다 (select 문)
+2.executeUpdate() -> SQL문 실행 후 테이블의 내용만 변경되는 경우 사용 합니다(insert , delete , update 문)
